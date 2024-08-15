@@ -1,0 +1,292 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #36393f;
+    color: #dcddde;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    min-height: 100vh; /* Changed from height to min-height */
+    overflow: auto; /* Allow body to scroll */
+}
+
+p {
+    text-align: left;
+}
+
+img {
+    border-radius: 3%;
+}
+
+.verifytext {
+    margin-left: 100px;
+    margin-right: 60px;
+}
+
+#app {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.1);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0; /* Add margin for spacing */;
+}
+
+.parchment {
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("https://i.sstatic.net/kb0Zm.jpg");
+}
+
+#card h1 {
+    color: black !important;
+}
+
+#card p {
+    color: black !important;
+}
+
+/* Page Visibility */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Button Container */
+.button-container {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid Layout for Word Buttons */
+.word-buttons {
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+}
+
+/* Grid Layout for Name Buttons */
+.name-buttons {
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    align-items: center;
+}
+
+/* Text "Select:" Styles */
+.name-buttons h2 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    border: 2px solid #5865F2; /* Light blurple outline */
+    border-radius: 4px;
+    height: 58px; /* Match button height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Styles */
+.word-button,
+.name-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #5865F2; /* Discord's blurple */
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Prevent overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-overflow: ellipsis; /* Add ellipsis to overflow text */
+}
+
+.word-button {
+    width: 200px; /* Increased fixed width for word buttons */
+}
+
+.name-button {
+    width: 120px; /* Fixed width for name buttons */
+}
+
+.word-button:hover,
+.name-button:hover {
+    background-color: #4752C4; /* Slightly darker blurple */
+    transform: translateY(-2px);
+}
+
+.word-button.selected {
+    background-color: #43b581;
+    border-color: #43b581;
+}
+
+/* Submit Button Styles */
+.submit-button {
+    padding: 10px 20px;
+    margin: 20px auto;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background-color: #d9534f; /* Less saturated red */
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 180px; /* Fixed width */
+    height: 60px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-button:hover {
+    background-color: #c12e2a; /* Slightly darker red */
+    transform: translateY(-2px);
+}
+
+.reveal {
+    width: auto;
+}
+
+.dead-submit {
+    background-color: #696868;
+    cursor: not-allowed;
+    color: rgb(62, 62, 62);
+}
+
+.dead-submit:hover {
+    background-color: #696868;
+    transform: translateY(0px);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Input Styles */
+input[type="number"] {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 80%;
+    box-sizing: border-box;
+    background-color: #40444b;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+input[type="number"]::placeholder {
+    color: #72767d;
+}
+
+/* Headings and Text */
+h1 {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 1px;
+}
+
+p {
+    color: #d5d6d8;
+    font-size: 20px;
+}
+
+/* Vertically Centered Page */
+.centered-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Go Back Button Styles */
+.go-back-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #7289da; /* Slightly different color */
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 150px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.go-back-button:hover {
+    background-color: #5b6eae; /* Slightly darker color */
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Gray Out Button Styles */
+.word-button.gray-out {
+    background-color: #696868;
+    cursor: not-allowed;
+    color: rgb(62, 62, 62);
+}
+
+.word-button.gray-out:hover {
+    transform: translateY(0px);
+}
+
+.alertcontainer {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #36393f;
+    color: #dcddde;
+}
+
+.word-button.yellow-out {
+    background-color: #a28d27;
+    color: black;
+}
+
+.word-button.magic-button {
+    background-color: #e3c21c;
+    color: black;
+}
+
+.magic-button.selected {
+    background-color: #43b581;
+    border-color: #43b581;
+    color: white;
+}
+
+.secret {
+    display: none;
+}
+
+.big {
+    font-size: 35px;
+}
+
+#image-grid {
+    display: grid;
+    width: 302px;
+    display: inline-block;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
